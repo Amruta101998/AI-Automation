@@ -5,7 +5,7 @@
 if ! command -v bito &> /dev/null
 then
     echo "bito could not be found. Please install it and try again."
-    exit 1
+    exit 0
 fi
 
 # Setting some required variables
@@ -45,7 +45,7 @@ prompt=${prompt/\$framework/${framework}}
 prompt=${prompt/\$filename/${filename}.${extension}}
 
 # Initialize context variable
-context=""
+context=" "
 
 # If there are additional arguments, concatenate their contents into the context variable
 shift # Skip the first argument
